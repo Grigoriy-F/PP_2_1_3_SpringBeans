@@ -13,12 +13,14 @@ public class AnimalsCage {
         this.animal = animal;
         this.timer = timer;
     }
-
+ // метод whatAnimalSay() будет использовать существующий бин Timer, переданный в конструктор AnimalsCage,
+ // вместо создания нового объекта Timer. Это обеспечит правильное время при каждом вызове метода.
     public void whatAnimalSay() {
         System.out.println("Say:");
         System.out.println(animal.toString());
         System.out.println("At:");
-        System.out.println(new Timer().getTime());
+        //System.out.println(new Timer().getTime());
+        System.out.println(timer.getTime());
         System.out.println("________________________");
     }
 
